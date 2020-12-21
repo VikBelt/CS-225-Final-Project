@@ -1,6 +1,7 @@
-# CS 225 Final Project - Open Flights Data Analysis in C++
+# Graph Algorithms in C++ - with Open Flights 
 Data Analysis of Open Flights Data using a weighted, directed Graph. <br/>
 Team Members: Mois Bourla, Vikram Belthur, Tanmay Goyal. <br/>
+Doxygen: https://vikrambelthur.com/cs_225_final_project_docs/
 ## Building and Running
 This project can be built on most Linux Systems and on Windows. <br/>
 ### Running on Linux (and EWS)
