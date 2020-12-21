@@ -22,7 +22,7 @@ int main(){
     try{
         testGraph.storeAirports("airports.dat");
     }
-    catch(mtv::graph_excepts::airport_parse_error& error){
+    catch(const mtv::graph_excepts::airport_parse_error& error){
         std::cout<<error.what()<<std::endl;
     }
     std::cout<<"Airport parsing complete"<<std::endl;
