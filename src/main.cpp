@@ -6,12 +6,25 @@ int main(){
     std::cout<<"Creating Graph (takes a few seconds)"<<std::endl;
     Graph testGraph(20000);
     std::cout<<"Graph construction complete"<<std::endl;
+
     // parse in information about routes and airports
     std::cout<<"Parsing in routes"<<std::endl;
-    testGraph.parseRoutes("routes_parsed.csv");
+    try{
+        testGraph.parseRoutes("routes_parsed.csv");
+    } 
+    catch (const mtv::graph_excepts::route_parse_error& error ){
+        std::cout<<error.what()<<std::endl;
+    }
     std::cout<<"Route parsing complete"<<std::endl;
+
+    //store airport info
     std::cout<<"Parsing in airport info"<<std::endl;
-    testGraph.storeAirports("airports.dat");
+    try{
+        testGraph.storeAirports("airports.dat");
+    }
+    catch(mtv::graph_excepts::airport_parse_error& error){
+        std::cout<<error.what()<<std::endl;
+    }
     std::cout<<"Airport parsing complete"<<std::endl;
 
     // get a vector of airports to facilitate calling functions
